@@ -45,6 +45,7 @@ function TempLanding() {
           className="w-64 p-1.5 mb-2 rounded bg-zinc-800 border border-zinc-700 text-sm resize-none block" 
           rows={3}
           placeholder="Message" 
+          required
         />
         <button className="px-3 py-1 text-xs bg-zinc-700 hover:bg-zinc-600 rounded-full" type="submit">
           Send
