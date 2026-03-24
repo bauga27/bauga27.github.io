@@ -5,7 +5,7 @@ import './index.css'
 import Home from './pages/Home'
 import TempLanding from './pages/temp_landing'
 import Navbar from './components/Navbar' // Adjust this path if your Navbar is saved elsewhere
-
+import Contact from './pages/Contact'
 // 1. The Layout Component
 function Layout() {
   return (
@@ -32,7 +32,7 @@ function App() {
           <Route path="/projects" element={<TempLanding />} />
           <Route path="/games" element={<TempLanding />} />
           <Route path="/gallery" element={<TempLanding />} />
-          <Route path="/contact" element={<TempLanding />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
     </BrowserRouter>
