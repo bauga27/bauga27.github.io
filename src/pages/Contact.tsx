@@ -26,7 +26,6 @@ export default function Contact() {
     setTimeout(() => setSubmitted(false), 4000);
   };
 
-  // Animation variants for staggered load
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
@@ -54,8 +53,7 @@ export default function Contact() {
               Wanna connect? 🦜
             </h1>
             <p className="text-lg leading-relaxed text-zinc-400">
-              I'm always open to talking about frontend architecture, macroeconomics, or even just swapping badminton strategies. Whether you have a project idea, a question, or just want to say hey, drop a message below.
-            </p>
+              I’m currently open to opportunities, and always down to talk about projects, website ideas, or anything. If you’ve got something in mind, feel free to reach out. Even if you just want to say hey, that’s cool too.            </p>
           </div>
 
           <form onSubmit={handleSubmit} className="flex flex-col space-y-4 relative">
@@ -114,8 +112,8 @@ export default function Contact() {
             <h2 className="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-6">Digital Footprint</h2>
             
             <div className="flex flex-col space-y-3">
-              {/* GitHub */}
-              <a href="https://github.com/bauga27" target="_blank" rel="noreferrer" className="group flex items-center justify-between p-4 rounded-xl bg-zinc-800/20 border border-zinc-800 hover:border-zinc-600 hover:bg-zinc-800/40 transition-all duration-300">
+              {/* GitHub (White/Gray hover) */}
+              <a href="https://github.com/bauga27" target="_blank" rel="noreferrer" className="group flex items-center justify-between p-4 rounded-xl bg-zinc-800/20 border border-zinc-800 hover:border-zinc-400 hover:bg-zinc-800/60 transition-all duration-300">
                 <div className="flex items-center gap-4">
                   <Github size={20} className="text-zinc-400 group-hover:text-white transition-colors" />
                   <span className="text-zinc-300 group-hover:text-white transition-colors">GitHub</span>
@@ -123,31 +121,31 @@ export default function Contact() {
                 <ArrowDownRight size={16} className="text-zinc-600 group-hover:text-white group-hover:-rotate-90 transition-all duration-300" />
               </a>
 
-              {/* LinkedIn */}
-              <a href="https://linkedin.com/in/bautistagabriel" target="_blank" rel="noreferrer" className="group flex items-center justify-between p-4 rounded-xl bg-zinc-800/20 border border-zinc-800 hover:border-zinc-600 hover:bg-zinc-800/40 transition-all duration-300">
+              {/* LinkedIn (Blue hover) */}
+              <a href="https://linkedin.com/in/bautistagabriel" target="_blank" rel="noreferrer" className="group flex items-center justify-between p-4 rounded-xl bg-zinc-800/20 border border-zinc-800 hover:border-blue-500/50 hover:bg-blue-900/10 transition-all duration-300">
                 <div className="flex items-center gap-4">
-                  <Linkedin size={20} className="text-zinc-400 group-hover:text-white transition-colors" />
+                  <Linkedin size={20} className="text-zinc-400 group-hover:text-blue-400 transition-colors" />
                   <span className="text-zinc-300 group-hover:text-white transition-colors">LinkedIn</span>
                 </div>
-                <ArrowDownRight size={16} className="text-zinc-600 group-hover:text-white group-hover:-rotate-90 transition-all duration-300" />
+                <ArrowDownRight size={16} className="text-zinc-600 group-hover:text-blue-400 group-hover:-rotate-90 transition-all duration-300" />
               </a>
 
-              {/* Instagram */}
-              <a href="https://instagram.com/_bauga" target="_blank" rel="noreferrer" className="group flex items-center justify-between p-4 rounded-xl bg-zinc-800/20 border border-zinc-800 hover:border-zinc-600 hover:bg-zinc-800/40 transition-all duration-300">
+              {/* Instagram (Pink/Purple hover) */}
+              <a href="https://instagram.com/_bauga" target="_blank" rel="noreferrer" className="group flex items-center justify-between p-4 rounded-xl bg-zinc-800/20 border border-zinc-800 hover:border-pink-500/50 hover:bg-pink-900/10 transition-all duration-300">
                 <div className="flex items-center gap-4">
-                  <Instagram size={20} className="text-zinc-400 group-hover:text-white transition-colors" />
+                  <Instagram size={20} className="text-zinc-400 group-hover:text-pink-400 transition-colors" />
                   <span className="text-zinc-300 group-hover:text-white transition-colors">Instagram</span>
                 </div>
-                <ArrowDownRight size={16} className="text-zinc-600 group-hover:text-white group-hover:-rotate-90 transition-all duration-300" />
+                <ArrowDownRight size={16} className="text-zinc-600 group-hover:text-pink-400 group-hover:-rotate-90 transition-all duration-300" />
               </a>
 
-              {/* Email */}
-              <a href="gbautist@ualberta.ca" className="group flex items-center justify-between p-4 rounded-xl bg-zinc-800/20 border border-zinc-800 hover:border-zinc-600 hover:bg-zinc-800/40 transition-all duration-300">
+              {/* Email (Emerald Green hover) */}
+              <a href="mailto:gbautist@ualberta.ca" className="group flex items-center justify-between p-4 rounded-xl bg-zinc-800/20 border border-zinc-800 hover:border-emerald-500/50 hover:bg-emerald-900/10 transition-all duration-300">
                 <div className="flex items-center gap-4">
-                  <Mail size={20} className="text-zinc-400 group-hover:text-white transition-colors" />
+                  <Mail size={20} className="text-zinc-400 group-hover:text-emerald-400 transition-colors" />
                   <span className="text-zinc-300 group-hover:text-white transition-colors">Email</span>
                 </div>
-                <ArrowDownRight size={16} className="text-zinc-600 group-hover:text-white group-hover:-rotate-90 transition-all duration-300" />
+                <ArrowDownRight size={16} className="text-zinc-600 group-hover:text-emerald-400 group-hover:-rotate-90 transition-all duration-300" />
               </a>
             </div>
           </div>
@@ -156,17 +154,17 @@ export default function Contact() {
             <h2 className="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-6">Extras</h2>
             
             <div className="flex flex-col space-y-3">
-              {/* Resume */}
-              <a href="/Bautista_Resume.pdf" target="_blank" rel="noreferrer" className="group flex items-center justify-between p-4 rounded-xl bg-zinc-800/20 border border-zinc-800 hover:border-zinc-600 hover:bg-zinc-800/40 transition-all duration-300">
+              {/* Resume (Red hover) */}
+              <a href="/Bautista_Resume.pdf" target="_blank" rel="noreferrer" className="group flex items-center justify-between p-4 rounded-xl bg-zinc-800/20 border border-zinc-800 hover:border-red-500/50 hover:bg-red-900/10 transition-all duration-300">
                 <div className="flex items-center gap-4">
-                  <FileText size={20} className="text-zinc-400 group-hover:text-white transition-colors" />
+                  <FileText size={20} className="text-zinc-400 group-hover:text-red-400 transition-colors" />
                   <span className="text-zinc-300 group-hover:text-white transition-colors">View Resume</span>
                 </div>
-                <ArrowDownRight size={16} className="text-zinc-600 group-hover:text-white group-hover:-rotate-90 transition-all duration-300" />
+                <ArrowDownRight size={16} className="text-zinc-600 group-hover:text-red-400 group-hover:-rotate-90 transition-all duration-300" />
               </a>
 
-              {/* Buy Me A Coffee */}
-              <a href="https://buymeacoffee.com/bauga" target="_blank" rel="noreferrer" className="group flex items-center justify-between p-4 rounded-xl bg-zinc-800/20 border border-zinc-800 hover:border-amber-600/50 hover:bg-amber-900/10 transition-all duration-300">
+              {/* Buy Me A Coffee (Amber hover) */}
+              <a href="https://buymeacoffee.com/bauga" target="_blank" rel="noreferrer" className="group flex items-center justify-between p-4 rounded-xl bg-zinc-800/20 border border-zinc-800 hover:border-amber-500/50 hover:bg-amber-900/10 transition-all duration-300">
                 <div className="flex items-center gap-4">
                   <Coffee size={20} className="text-amber-500/70 group-hover:text-amber-400 transition-colors" />
                   <span className="text-zinc-300 group-hover:text-white transition-colors">Buy me a coffee</span>
