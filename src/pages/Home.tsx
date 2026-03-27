@@ -110,11 +110,9 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-8 md:gap-12 w-full max-w-5xl mx-auto">
               
               <div className="flex-1 flex flex-col items-center md:items-start w-full text-center md:text-left order-1 md:order-1">
-                {/* FIX: Removed max-w to let flexbox center properly */}
                 <div className="mb-4 md:mb-6 h-[60px] md:h-[120px] w-full flex justify-center md:justify-start">
                   <motion.svg 
                     className="w-auto h-full" 
-                    // FIX: Tightened viewBox from "0 0 400 120" to "0 0 320 120" to perfectly center the letters
                     viewBox="0 0 320 120"
                     preserveAspectRatio="xMinYMid meet"
                   >
@@ -169,13 +167,15 @@ export default function Home() {
             </div>
             <div className="md:col-span-8">
               <h3 className="text-2xl md:text-4xl font-medium text-white mb-4 md:mb-6 leading-tight">
-                I like building things that are actually useful.
+                I like building things that actually work.
               </h3>
+
               <p className="text-base md:text-lg leading-relaxed mb-4 md:mb-6">
-                Most of what I work on sits somewhere between engineering and real-world use — apps, tools, and systems that people can actually rely on. I’m not really into overcomplicating things. If it works cleanly and makes sense, that’s usually the goal.
+                Most of what I build is just stuff I find interesting or useful at the time. Sometimes it solves a real problem, sometimes it is just something I wanted to try out. Either way, I care more about it working cleanly than being overcomplicated.
               </p>
+
               <p className="text-base md:text-lg leading-relaxed">
-                Right now I’m focused on getting better at structuring systems, improving how my apps scale, and making interfaces feel smooth and intuitive. Just trying to build things that don’t feel clunky.
+                Lately I’ve been playing around with ML/AI, just seeing where it takes me. If something cool comes out of it, even better.
               </p>
             </div>
           </div>
@@ -187,26 +187,101 @@ export default function Home() {
             <div className="md:col-span-4 flex items-start">
               <h2 className="text-xs md:text-sm font-mono tracking-widest uppercase text-zinc-500">02. Stack</h2>
             </div>
+
             <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
               <div className="group p-5 md:p-6 rounded-2xl bg-zinc-800/40 border border-zinc-700/50 hover:bg-zinc-800 hover:border-zinc-600 transition-all duration-300">
-                <Code2 className="text-zinc-500 mb-3 md:mb-4 group-hover:text-white transition-colors" size={20} />
-                <h4 className="text-white text-base md:text-lg mb-2">Frontend</h4>
-                <p className="text-xs md:text-sm text-zinc-400">React, TypeScript, Next.js — building clean, responsive interfaces with smooth interactions</p>
+                <Code2 className="text-zinc-500 mb-3 md:mb-4 group-hover:text-white transition-colors" size={18} />
+                <h4 className="text-white text-base md:text-lg mb-3">Languages</h4>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Python",
+                    "C",
+                    "C++",
+                    "Java",
+                    "JavaScript",
+                    "TypeScript",
+                    "SQL",
+                    "HTML/CSS",
+                    "R",
+                  ].map((tool) => (
+                    <span
+                      key={tool}
+                      className="px-2.5 py-1 rounded-lg bg-zinc-900/70 border border-zinc-700/60 text-[11px] md:text-xs text-zinc-300 leading-none"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
               </div>
+
               <div className="group p-5 md:p-6 rounded-2xl bg-zinc-800/40 border border-zinc-700/50 hover:bg-zinc-800 hover:border-zinc-600 transition-all duration-300">
-                <Globe className="text-zinc-500 mb-3 md:mb-4 group-hover:text-white transition-colors" size={20} />
-                <h4 className="text-white text-base md:text-lg mb-2">Backend & Data</h4>
-                <p className="text-xs md:text-sm text-zinc-400">Node, Django, FastAPI, PostgreSQL — handling APIs, data flow, and application logic</p>
+                <Globe className="text-zinc-500 mb-3 md:mb-4 group-hover:text-white transition-colors" size={18} />
+                <h4 className="text-white text-base md:text-lg mb-3">Frameworks & Libraries</h4>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "React",
+                    "React Native",
+                    "Node.js",
+                    "Django",
+                    "Flask",
+                    "FastAPI",
+                    "Supabase",
+                    "Jest",
+                  ].map((tool) => (
+                    <span
+                      key={tool}
+                      className="px-2.5 py-1 rounded-lg bg-zinc-900/70 border border-zinc-700/60 text-[11px] md:text-xs text-zinc-300 leading-none"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
               </div>
+
               <div className="group p-5 md:p-6 rounded-2xl bg-zinc-800/40 border border-zinc-700/50 hover:bg-zinc-800 hover:border-zinc-600 transition-all duration-300">
-                <Code2 className="text-zinc-500 mb-3 md:mb-4 group-hover:text-white transition-colors" size={20} />
-                <h4 className="text-white text-base md:text-lg mb-2">Mobile & Full-Stack</h4>
-                <p className="text-xs md:text-sm text-zinc-400">React Native, Firebase, Supabase — building apps with real-time data and offline support</p>
+                <Code2 className="text-zinc-500 mb-3 md:mb-4 group-hover:text-white transition-colors" size={18} />
+                <h4 className="text-white text-base md:text-lg mb-3">Tools & Platforms</h4>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Git",
+                    "GitHub",
+                    "VS Code",
+                    "Android Studio",
+                    "Firebase",
+                    "MongoDB",
+                    "Tableau",
+                    "Postman",
+                    "UML",
+                    "Microsoft Office",
+                  ].map((tool) => (
+                    <span
+                      key={tool}
+                      className="px-2.5 py-1 rounded-lg bg-zinc-900/70 border border-zinc-700/60 text-[11px] md:text-xs text-zinc-300 leading-none"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
               </div>
+
               <div className="group p-5 md:p-6 rounded-2xl bg-zinc-800/40 border border-zinc-700/50 hover:bg-zinc-800 hover:border-zinc-600 transition-all duration-300">
-                <Globe className="text-zinc-500 mb-3 md:mb-4 group-hover:text-white transition-colors" size={20} />
-                <h4 className="text-white text-base md:text-lg mb-2">Tools & Workflow</h4>
-                <p className="text-xs md:text-sm text-zinc-400">Git, CI/CD, Postman — shipping, testing, and maintaining projects properly</p>
+                <Globe className="text-zinc-500 mb-3 md:mb-4 group-hover:text-white transition-colors" size={18} />
+                <h4 className="text-white text-base md:text-lg mb-3">Practices</h4>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Agile",
+                    "Scrum",
+                    "TDD",
+                    "CI/CD",
+                  ].map((tool) => (
+                    <span
+                      key={tool}
+                      className="px-2.5 py-1 rounded-lg bg-zinc-900/70 border border-zinc-700/60 text-[11px] md:text-xs text-zinc-300 leading-none"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -247,16 +322,14 @@ export default function Home() {
             </div>
             <div className="md:col-span-8">
               <p className="text-base md:text-lg leading-relaxed mb-4 md:mb-6">
-                I try to keep a balance between building things and actually living a bit. When I’m not coding, I’m usually at the gym, playing badminton, or trying to cook something new (hit or miss).
+                I try to keep a balance between building things and actually living a bit. When I’m not coding, I’m usually at the gym, playing badminton, or being a big back.
               </p>
               <p className="text-base md:text-lg leading-relaxed">
-                I’m also big on random side quests — showing up to events, exploring new places, meeting people, or just doing something different. Not everything needs to be productive.
+                I’m also big on random side quests. Whether it's showing up to events, exploring new places, meeting people, or just doing something different. Just gotta keep things interesting 😤
               </p>
             </div>
           </div>
         </ScrollSection>
-
-        {/* FIX: This invisible spacer block guarantees the last section has enough room to snap completely to the center */}
         <div className="h-[20vh] w-full shrink-0 pointer-events-none" />
 
       </div>

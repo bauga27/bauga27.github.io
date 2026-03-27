@@ -53,7 +53,7 @@ export default function Contact() {
               Wanna connect? 🦜
             </h1>
             <p className="text-lg leading-relaxed text-zinc-400">
-            Always down to talk about projects, website ideas, or anything. If you’ve got something in mind, feel free to reach out. Even if you just want to say hey, that’s cool too :)            </p>
+            Always down to talk about projects, website ideas, or anything. If you’ve got something in mind, feel free to reach out. Even if you just wanna say hey, that’s cool too :)            </p>
           </div>
 
           <form onSubmit={handleSubmit} className="flex flex-col space-y-4 relative">
