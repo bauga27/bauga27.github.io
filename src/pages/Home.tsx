@@ -110,15 +110,20 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-8 md:gap-12 w-full max-w-5xl mx-auto">
               
               <div className="flex-1 flex flex-col items-center md:items-start w-full text-center md:text-left order-1 md:order-1">
-                <div className="mb-4 md:mb-6 h-[60px] md:h-[120px] w-full flex justify-center md:justify-start">
+                
+                <div className="mb-4 md:mb-6 h-[70px] sm:h-[80px] md:h-[130px] w-full flex justify-center md:justify-start">
+                  
+                  {/* 1. MOBILE SVG: Forces text to perfectly dead-center (Hidden on Desktop) */}
                   <motion.svg 
-                    className="w-auto h-full" 
-                    viewBox="0 0 320 120"
-                    preserveAspectRatio="xMinYMid meet"
+                    className="w-auto h-full md:hidden" 
+                    viewBox="0 0 320 140" 
+                    preserveAspectRatio="xMidYMid meet"
                   >
                     <motion.text
-                      x="0" y="90"
-                      className="text-7xl md:text-[100px] font-bold tracking-tighter"
+                      x="50%" y="105" 
+                      textAnchor="middle"
+                      className="font-bold tracking-tighter"
+                      style={{ fontSize: "100px" }} 
                       fill="transparent" stroke="white" strokeWidth="2"
                       initial={{ strokeDasharray: 400, strokeDashoffset: 400, fill: "rgba(255,255,255,0)" }}
                       animate={{
@@ -130,6 +135,29 @@ export default function Home() {
                       bauga.
                     </motion.text>
                   </motion.svg>
+
+                  {/* 2. DESKTOP SVG: Locks perfectly to the left edge (Hidden on Mobile) */}
+                  <motion.svg 
+                    className="w-auto h-full hidden md:block" 
+                    viewBox="0 0 320 140" 
+                    preserveAspectRatio="xMinYMid meet"
+                  >
+                    <motion.text
+                      x="0" y="105" 
+                      className="font-bold tracking-tighter"
+                      style={{ fontSize: "100px" }} 
+                      fill="transparent" stroke="white" strokeWidth="2"
+                      initial={{ strokeDasharray: 400, strokeDashoffset: 400, fill: "rgba(255,255,255,0)" }}
+                      animate={{
+                        strokeDashoffset: [400, 0, 0, 400],
+                        fill: ["rgba(255,255,255,0)", "rgba(255,255,255,1)", "rgba(255,255,255,1)", "rgba(255,255,255,0)"]
+                      }}
+                      transition={{ duration: 8, ease: "easeInOut", repeat: Infinity, times: [0, 0.3, 0.8, 1] }}
+                    >
+                      bauga.
+                    </motion.text>
+                  </motion.svg>
+
                 </div>
 
                 <p className="text-lg md:text-2xl max-w-xl font-light leading-relaxed text-zinc-300">
@@ -139,16 +167,26 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col items-center space-y-4 order-2 md:order-2">
-                <div className="h-48 w-48 md:h-72 md:w-72 rounded-full bg-zinc-800 border-4 border-zinc-700/50 flex items-center justify-center overflow-hidden shadow-[0_0_30px_-5px_rgba(255,255,255,0.1)] group transition-transform hover:scale-105 duration-300">
+                <motion.div 
+                  initial={{ scale: 0.8, opacity: 0, filter: "blur(10px)" }}
+                  animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
+                  transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
+                  className="h-48 w-48 md:h-72 md:w-72 rounded-full bg-zinc-800 border-4 border-zinc-700/50 flex items-center justify-center overflow-hidden shadow-[0_0_30px_-5px_rgba(255,255,255,0.1)] group transition-transform hover:scale-105 duration-300"
+                >
                   <img 
                     src="/baby_gabe.jpg"
                     alt="Baby Gabe" 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
                   />
-                </div>
-                <p className="text-xs md:text-sm font-mono tracking-wider text-zinc-500 text-center w-full">
+                </motion.div>
+                <motion.p 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.6, duration: 0.8 }}
+                  className="text-xs md:text-sm font-mono tracking-wider text-zinc-500 text-center w-full"
+                >
                   (yes, the baby with all that swag is me) 
-                </p>
+                </motion.p>
               </div>
             </div>
             
