@@ -1,10 +1,9 @@
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
 import './index.css'
 
-// Import your pages and components
 import Home from './pages/Home'
 import TempLanding from './pages/temp_landing'
-import Navbar from './components/Navbar' // Adjust this path if your Navbar is saved elsewhere
+import Navbar from './components/Navbar' 
 import Contact from './pages/Contact'
 // 1. The Layout Component
 function Layout() {

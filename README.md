@@ -9,7 +9,7 @@ website will consist of:
 
 # Tech Stack 
 * React
-* JS
+* TypeScript
 * Tailwind CSS 
 
 # React + TypeScript + Vite

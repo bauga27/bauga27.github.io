@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { Github, Instagram, Mail, FileText, Coffee, Send, CheckCircle2, ArrowDownRight, Linkedin } from 'lucide-react';
 
 export default function Contact() {
@@ -26,14 +26,14 @@ export default function Contact() {
     setTimeout(() => setSubmitted(false), 4000);
   };
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } }
+    visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: 'easeOut' } }
   };
 
   return (
