@@ -1,10 +1,13 @@
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
 import './index.css'
 
-import Home from './pages/Home'
+// import Home from './pages/Home'
+import TempUnavailable from './pages/temp_unavailable'
+
 import TempLanding from './pages/temp_landing'
 import Navbar from './components/Navbar' 
 import Contact from './pages/Contact'
+
 // 1. The Layout Component
 function Layout() {
   return (
@@ -23,16 +26,25 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+
+        {/* TEMP LOCKDOWN MODE */}
+        <Route path="*" element={<TempUnavailable />} />
+
+        {/*
+        ORIGINAL WEBSITE ROUTES
+
         <Route element={<Layout />}>
-          {/* Home Page */}
+          
           <Route path="/" element={<Home />} />
           
-          {/* Placeholders using TempLanding */}
           <Route path="/projects" element={<TempLanding />} />
           <Route path="/games" element={<TempLanding />} />
           <Route path="/gallery" element={<TempLanding />} />
           <Route path="/contact" element={<Contact />} />
+        
         </Route>
+        */}
+
       </Routes>
     </BrowserRouter>
   )
